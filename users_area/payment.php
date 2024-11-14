@@ -110,7 +110,6 @@ include('../functions/common_functions.php');
     <!-- End NavBar -->
     <!-- php code to access user id  -->
     <?php
-    session_start();
 
     // Check if the session has a logged-in user
     if (isset($_SESSION['username'])) {
