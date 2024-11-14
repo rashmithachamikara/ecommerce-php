@@ -111,6 +111,7 @@ include('../functions/common_functions.php');
     <!-- php code to access user id  -->
     <?php
 
+
     // Check if the session has a logged-in user
     if (isset($_SESSION['username'])) {
         // Fetch the username from the session
