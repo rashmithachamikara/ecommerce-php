@@ -108,16 +108,33 @@ include('../functions/common_functions.php');
         </div>
     </nav> -->
     <!-- End NavBar -->
-        <!-- php code to access user id  -->
-        <?php
-            $user_ip = getIPAddress();
-            $get_user_query = "SELECT * FROM `user_table` WHERE user_ip='$user_ip'";
-            $get_user_result = mysqli_query($con,$get_user_query);
-            $fetch_user = mysqli_fetch_array($get_user_result);
-            $user_id = $fetch_user['user_id'];
+    <!-- php code to access user id  -->
+    <?php
 
-        ?>
-        <!-- php code to access user id  -->
+
+    // Check if the session has a logged-in user
+    if (isset($_SESSION['username'])) {
+        // Fetch the username from the session
+        $username = $_SESSION['username'];
+
+        // Query the database to get the user ID
+        $get_user_query = "SELECT * FROM `user_table` WHERE username='$username'";
+        $get_user_result = mysqli_query($con, $get_user_query);
+
+        if ($get_user_result && mysqli_num_rows($get_user_result) > 0) {
+            $fetch_user = mysqli_fetch_assoc($get_user_result);
+            $user_id = $fetch_user['user_id'];
+        } else {
+            // If no user found, handle it accordingly
+            echo "User not found.";
+        }
+    } else {
+        // If no user session is available, redirect to the login page or show guest message
+        echo "No user is logged in.";
+    }
+    ?>
+
+    <!-- php code to access user id  -->
     <!-- Start Landing Section -->
     <div class="landing">
         <div class="container">
@@ -146,7 +163,7 @@ include('../functions/common_functions.php');
                     </a>
                 </div>
                 <div class="col-md-6 d-flex justify-content-center align-items-center">
-                    <a href="order.php?user_id=<?php echo $user_id;?>" class="fs-1 fw-bold text-decoration-underline">
+                    <a href="order.php?user_id=<?php echo $user_id; ?>" class="fs-1 fw-bold text-decoration-underline">
                         Pay Cash
                     </a>
                 </div>
