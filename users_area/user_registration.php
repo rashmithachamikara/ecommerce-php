@@ -1,20 +1,4 @@
-<?php
-include('../includes/connect.php');
-include('../functions/common_functions.php');
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce User Registeration Page</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.css" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-</head>
-
-<body>
+<?php include('../includes/header.php'); ?>
 
     <div class="register">
         <div class="container py-3">
@@ -69,9 +53,11 @@ include('../functions/common_functions.php');
         </div>
     </div>
     <script src="./assets//js/bootstrap.bundle.js"></script>
-</body>
 
-</html>
+<?php include('../includes/footer.php'); ?>
+
+
+
 <!-- php code  -->
 <?php
 if (isset($_POST['user_register'])) {

@@ -1,14 +1,14 @@
     <div class="container my-5">
-        <h1 class="text-center mb-5">Delete an account</h1>
+        <h1 class="text-center mb-5">Delete account</h1>
         <div class="row justify-content-center">
             <div class="col-md-5">
                 <form method="post" class="d-flex flex-column gap-4 text-center" action="">
                     <div class="form-outline">
                         <input type="submit" value="Delete Account" name="submit_delete" class="btn btn-outline-primary form-control">
                     </div>
-                    <div class="form-outline">
+                    <!-- <div class="form-outline">
                         <input type="submit" value="Don't Delete Account" name="submit_dont_delete" class="btn btn-outline-primary form-control">
-                    </div>
+                    </div> -->
                 </form>
             </div>
         </div>

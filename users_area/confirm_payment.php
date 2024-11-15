@@ -1,7 +1,6 @@
+<?php include('../includes/header.php'); ?>
+
 <?php
-include("../includes/connect.php");
-include("../functions/common_functions.php");
-session_start();
 if (isset($_GET['order_id'])) {
     $order_id = $_GET['order_id'];
     $select_order_query = "SELECT * FROM `user_orders` WHERE order_id = '$order_id'";
@@ -27,23 +26,8 @@ if(isset($_POST['confirm_payment'])){
     $update_orders_result = mysqli_query($con,$update_orders_query);
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Page</title>
-    <link rel="stylesheet" href="../assets/css/bootstrap.css" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-</head>
 
-<body>
-    <!-- upper-nav -->
-    <div class="upper-nav primary-bg p-2 px-3 text-center text-break">
-        <span>We are glad to help you | we wish buy again from our store</span>
-    </div>
-    <!-- upper-nav -->
     <div class="container my-5">
         <h1 class="text-center">Confirm Payment</h1>
         <div class="row justify-content-center">
@@ -74,6 +58,5 @@ if(isset($_POST['confirm_payment'])){
         </div>
     </div>
     <script src="../assets/js/bootstrap.bundle.js"></script>
-</body>
 
-</html>
+<?php include('../includes/footer.php'); ?>

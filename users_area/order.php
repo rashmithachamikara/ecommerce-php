@@ -28,9 +28,9 @@ while($row_price=mysqli_fetch_array($cart_result)){
         $product_price = array($row_product_price['product_price']);
         $product_values = array_sum($product_price) * $product_quantity;
         $total_price+=$product_values;
-        echo "Product Values" .  $product_values."<br/>";
-        echo "Total Price" .  $total_price."<br/>";
-        echo "Qauntity" .  $product_quantity."<br/>";
+        //echo "Product Values" .  $product_values."<br/>";
+        //echo "Total Price" .  $total_price."<br/>";
+        //echo "Qauntity" .  $product_quantity."<br/>";
     }
     //Ordes Pending
     $insert_pending_order_query = "INSERT INTO `orders_pending` (user_id,invoice_number,product_id,quantity,order_status) VALUES ($user_id,$invoice_number,$product_id,$product_quantity,'$status')";
