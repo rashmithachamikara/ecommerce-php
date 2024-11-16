@@ -242,7 +242,7 @@ session_start();
                         <button class='btn btn-dark'><a class='text-light' href=' $profile_link1 '>Checkout</a></button>
                         ";
                         } else {
-                            echo "<input type='button' value='Continue Shopping' class='btn btn-dark' name='continue_shopping'>";
+                            echo "<button class='btn btn-dark'><a class='text-light' href='./index.php'>Continue Shopping</a></button>";
                         }
                         if (isset($_POST['continue_shopping'])) {
                             // echo "<script>window.open('index.php','_self');</script>";
