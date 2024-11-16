@@ -99,6 +99,3 @@ $currentPage = basename($_SERVER['PHP_SELF']); // Get the current page file name
         </div>
     </nav>
     <!-- End NavBar -->
-</body>
-
-</html>
