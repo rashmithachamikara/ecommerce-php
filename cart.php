@@ -220,6 +220,9 @@ session_start();
                         ?>
                         </tbody>
                     </table>
+                    <?php
+                    $profile_link1 = isset($_SESSION['username']) ? "./users_area/checkout.php" : "./users_area/user_login.php";
+                    ?>
                     <!-- SubTotal -->
                     <div class="d-flex align-items-center gap-4 flex-wrap">
                         <?php
@@ -235,7 +238,8 @@ session_start();
                         <button class='btn btn-dark'><a class='text-light' href='./index.php'>Continue Shopping</a></button>
                         
                         
-                        <button class='btn btn-dark'><a class='text-light' href='./users_area/checkout.php'>Checkout</a></button>
+                        
+                        <button class='btn btn-dark'><a class='text-light' href=' $profile_link1 '>Checkout</a></button>
                         ";
                         } else {
                             echo "<input type='button' value='Continue Shopping' class='btn btn-dark' name='continue_shopping'>";
