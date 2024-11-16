@@ -32,7 +32,7 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="./index.php">Home</a>
+                        <a class="nav-link " href="./index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="./products.php">Products</a>
@@ -63,7 +63,7 @@ session_start();
                 </form>
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="./cart.php"><svg width="28" height="28" viewBox="0 0 32 32"
+                        <a class="nav-link active" href="./cart.php"><svg width="28" height="28" viewBox="0 0 32 32"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M11 27C11.5523 27 12 26.5523 12 26C12 25.4477 11.5523 25 11 25C10.4477 25 10 25.4477 10 26C10 26.5523 10.4477 27 11 27Z"
