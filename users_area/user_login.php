@@ -54,12 +54,18 @@ if (isset($_POST['user_login'])) {
             $_SESSION['username'] = $user_username;
             if ($row_count == 1 && $row_cart_count == 0) {
                 $_SESSION['username'] = $user_username;
-                echo "<script>alert('Login Successfully');</script>";
+                echo "<script>alert('Login Successfull');</script>";
                 echo "<script>window.open('profile.php','_self');</script>";
             } else if ($row_count == 1 && $row_cart_count > 0) {
                 $_SESSION['username'] = $user_username;
-                echo "<script>alert('Login Successfully');</script>";
-                echo "<script>window.open('payment.php','_self');</script>";
+                echo "<script>alert('Login Successfull');</script>";
+                if (isset($_SESSION['cart_pending'])) {
+                    echo "<script>window.open('".SITE_URL."/cart.php','_self');</script>";
+                    unset($_SESSION['cart_pending']);
+                } else {
+                    echo "<script>window.open('".SITE_URL."','_self');</script>";
+                }
+                
             }
         } else {
             echo "<script>alert('Invalid Credentials')</script>";
